@@ -1,13 +1,16 @@
 import sys
+from datetime import datetime
 
 
 def get_fuel_needed(initial_number):
     return initial_number // 3 - 2
 
 def solve_puzzle_1(lines_with_numbers):
+    start_ex_1 = datetime.now()
     sum_fuel_needed =  sum(map(get_fuel_needed, lines_with_numbers))
 
     print("Answer for day1, exercise 1: %s" % sum_fuel_needed)
+    print(datetime.now() - start_ex_1)
 
 
 def get_fuel_needed_2(initial_number):
@@ -19,9 +22,11 @@ def get_fuel_needed_2(initial_number):
 
 
 def solve_puzzle_2(lines_with_numbers):
+    start_ex_2 = datetime.now()
     sum_fuel_needed =  sum(map(get_fuel_needed_2, lines_with_numbers))
 
     print("Answer for day1, exercise 2: %s" % sum_fuel_needed)
+    print(datetime.now() - start_ex_2)
 
 
 if __name__ == "__main__":
